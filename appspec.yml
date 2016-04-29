@@ -6,9 +6,8 @@ files:
 hooks:
   BeforeInstall:
     - location: \before-install.bat
+    - location: \deregister_from_elb.sh
       timeout: 900
-  ApplicationStop:
-    - location: deregister_from_elb.sh
   ApplicationStart:
     - location: register_with_elb.sh    
   
